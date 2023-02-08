@@ -47,6 +47,8 @@ public class Huffman extends Huffnodes{
         }
     }
 
+    /**
+    *returns an array containing the frequency of all letters*/
     public int[] frequency(String text){
         int[] freqA = new int[this.abc.length()];
         for(int i = 0; i < this.abc.length();i++){
@@ -58,7 +60,10 @@ public class Huffman extends Huffnodes{
     public static void main(String[] args){
         Scanner console = new Scanner(System.in);
         System.out.print("Name of file: ");
-        String fileName = console.next();
+        String text = console.next(); //add text of file
+        
+        int[] freqABC = frequency(text);
+        int[] code = charConvert(freqABC);
         
         console.close();
     }
