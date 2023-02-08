@@ -307,6 +307,7 @@ public class Huffnodes {
         }
     }
     
+
     /**
      * charToCode: turns character into ascii, find it in the array
      * @param char caracter
@@ -322,6 +323,22 @@ public class Huffnodes {
         return code;
     }
     
+
+    /**charConvert: final method used by Huffmann.java
+     */
+    public static void charConvert(int[] abcFreq){
+        String abc = "abcdefghijklmnopqrstuvwxyz"
+        Huffnodes huff = new Huffnodes(abc.charAt(0), abcFreq[0], null, null, null);
+        for(int i = 1; i < 26; i++){
+            huff = insertNode(huff, i, abc.charAt(i), abcFreq[0],null,null);
+        }
+        Huffnodes rootN = huff.buildT();
+        String[] code = new String[10000];
+        findBitC(rootN, "",code);
+
+        return code;
+
+    }
 
     public static void main(String[] args){
         Huffnodes huff = new Huffnodes('c', 45, null, null, null);
