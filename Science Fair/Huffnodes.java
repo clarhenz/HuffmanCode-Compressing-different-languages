@@ -326,8 +326,8 @@ public class Huffnodes {
 
     /**charConvert: final method used by Huffmann.java
      */
-    public static void charConvert(int[] abcFreq){
-        String abc = "abcdefghijklmnopqrstuvwxyz"
+    public static String[] charConvert(int[] abcFreq){
+        String abc = "abcdefghijklmnopqrstuvwxyz";
         Huffnodes huff = new Huffnodes(abc.charAt(0), abcFreq[0], null, null, null);
         for(int i = 1; i < 26; i++){
             huff = insertNode(huff, i, abc.charAt(i), abcFreq[0],null,null);
