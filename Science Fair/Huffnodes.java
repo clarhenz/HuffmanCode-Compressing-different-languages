@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 /**
  *  Clara Henzinger
  *  07.12.2022
@@ -38,96 +40,8 @@ public class Huffnodes {
             return getNode(huff.next, i - 1);
         }
     }
+    
     //public methods
-
-     /**
-     * charAt - returns the character at the specified index of the
-     * specified linked-list string, where the first character has
-     * index 0.  If the index i is < 0 or i > length - 1, the method
-     * will end up throwing an IllegalArgumentException.
-     */
-    public static char charAt(Huffnodes huff, int i) {
-        if (huff == null) {
-            throw new IllegalArgumentException("the string is empty");
-        } 
-          
-        Huffnodes node = getNode(huff, i);
-
-        if (node != null) {
-            return node.ch;     
-        } else {
-            throw new IllegalArgumentException("invalid index: " + i);
-        }
-    }
-
-      /**
-     * freqAt - returns the frequency at the specified index of the
-     * specified linked-list string, where the first character has
-     * index 0.  If the index i is < 0 or i > length - 1, the method
-     * will end up throwing an IllegalArgumentException.
-     */
-    public static int freqAt(Huffnodes huff, int i) {
-        if (huff == null) {
-            throw new IllegalArgumentException("the string is empty");
-        } 
-          
-        Huffnodes node = getNode(huff, i);
-
-        if (node != null) {
-            return node.freq;     
-        } else {
-            throw new IllegalArgumentException("invalid index: " + i);
-        }
-    }
-
-    /**
-     * deleteNode - deletes a node i in the given linked-list and
-     * returns a reference to the resulting linked-list string
-     */
-    public static Huffnodes deleteNode(Huffnodes huff, int i) {
-        if (huff == null) {
-            throw new IllegalArgumentException("string is empty");
-        } else if (i < 0) { 
-            throw new IllegalArgumentException("invalid index: " + i);
-        } else if (i == 0) { 
-           huff = huff.next;
-        } else {
-            Huffnodes prevNode = getNode(huff, i-1);
-            if (prevNode != null && prevNode.next != null) {
-                prevNode.next = prevNode.next.next;
-            } else {
-                throw new IllegalArgumentException("invalid index: " + i);
-            }
-        }
-
-        return huff;
-    }
-
-        /**
-     * insertNode - inserts the node before the node
-     * currently in position i of the specified linked-list.
-     * Returns a reference to the resulting linked-list.
-     */
-    public static Huffnodes insertNode(Huffnodes huff, int i, char ch, int freq, Huffnodes left, Huffnodes right) {
-        Huffnodes newNode, prevNode;
-
-        if (i < 0) { 
-            throw new IllegalArgumentException("invalid index: " + i);
-        } else if (i == 0) {
-            newNode = new Huffnodes(ch, freq, huff,left,right);
-            huff = newNode;
-        } else {
-            prevNode = getNode(huff, i - 1);
-            if (prevNode != null) {
-                newNode = new Huffnodes(ch, freq, prevNode.next,left,right);
-                prevNode.next = newNode;
-            } else {
-                throw new IllegalArgumentException("invalid index: " + i);
-            }
-        }
-
-        return huff;
-    }
 
     /**
      * length - recursively determines the number of nodes in the
@@ -150,9 +64,9 @@ public class Huffnodes {
             System.out.println();
             return;
         } else {
-            System.out.print(huff.ch + " " + huff.freq + " ");     
-            print(huff.next);
-        }
+            System.out.print("ch: " + huff.ch + " freq: " + huff.freq + " ");
+        }     
+        
     }
 
     /** 
@@ -162,7 +76,7 @@ public class Huffnodes {
     public Huffnodes sortList()
     {
  
-        // Node current will pointo head
+        // Node current will point to head
 
         Huffnodes current = this;
         Huffnodes index = null;
@@ -172,7 +86,6 @@ public class Huffnodes {
             // Node index will point to node next to
             // current
             index = current.next;
- 
             while (index != null) {
                 // If current node's data is greater
                 // than index's node data, swap the data
@@ -185,7 +98,6 @@ public class Huffnodes {
                     index.freq = temp;
                     index.ch = temp2;
                 }
- 
                 index = index.next;
             }
             current = current.next;
@@ -213,10 +125,62 @@ public class Huffnodes {
         }
         return -1;
     }
+
+    public static Huffnodes bCleanLL(Huffnodes huff){
+        while(huff.freq == 0){
+            huff = huff.next;
+        }
+        Huffnodes prev = huff;
+        Huffnodes curr = prev.next;
+        while(curr.next != null){
+            if(curr.freq == 0){
+                prev.next = curr.next;
+            } else {
+                prev = curr;
+            }
+            curr = prev.next;
+        }
+
+        if(curr.freq == 0){
+            prev.next = curr.next;
+        } else {
+            prev = curr;
+        }
+
+        return huff;
+    }
+
+    /**
+     * buildLL - builds the Linked List using an array
+     * @param abcFreq
+     * @return
+     */
+    public static Huffnodes buildLL(int[] abcFreq){
+        Huffnodes huff = new Huffnodes((char)0, abcFreq[0], null, null, null);
+        Huffnodes prev = huff;
+        Huffnodes cur = null;
+        for(int i = 1; i < abcFreq.length; i++){
+            cur = new Huffnodes((char)i, abcFreq[i],null,null,null);
+            prev.next = cur;
+            prev = cur;
+        }
+        huff = bCleanLL(huff);
+        return huff;
+    }
+
+    public static void printLL(Huffnodes huff){
+        Huffnodes curr = huff;
+        while(curr.next != null){
+            print(curr);
+            curr = curr.next;
+        }
+        print(curr);
+    }
+
     /**takes two nodes and creates a merged node in the huffmantree which it returns*/
-    public Huffnodes mergeNode(Huffnodes next, Huffnodes node1, Huffnodes node2) {
+    public Huffnodes mergeNode(Huffnodes next, Huffnodes node1, Huffnodes node2, int ct) {
         int newF = node1.freq + node2.freq;
-        char newC = ' ';
+        char newC = (char)ct;
         Huffnodes merged = new Huffnodes(newC, newF, next, node1,node2);
         return merged;
 
@@ -232,13 +196,16 @@ public class Huffnodes {
     public Huffnodes mergeLowestF(){
         Huffnodes huff = this;
         int l = length(huff);
+        int ct = 1;
         if(l < 2){
             return huff;
         } else if (l==2){
-            Huffnodes merge = mergeNode(null,getNode(huff,0),getNode(huff,1));
+            Huffnodes merge = mergeNode(null,getNode(huff,0),getNode(huff,1), ct);
+            ct++;
             return merge;
         } else {
-            Huffnodes merge = mergeNode(null,getNode(huff,0),getNode(huff,1));
+            Huffnodes merge = mergeNode(null,getNode(huff,0),getNode(huff,1), ct);
+            ct++;
             huff = getNode(huff,2);
         
             if(huff.freq >= merge.freq){ //make merge the first node 
@@ -263,6 +230,7 @@ public class Huffnodes {
             }
         }  
     }
+
     
     /**
      * merges the nodes until it reaches the root node
@@ -274,6 +242,8 @@ public class Huffnodes {
             return huff;
         } else {
             huff = huff.mergeLowestF();
+            // System.out.println("\nList: ");
+            // printLL(huff);
             return buildHuffT(huff);
         }
     }
@@ -281,10 +251,18 @@ public class Huffnodes {
     public Huffnodes buildT(){
         Huffnodes huff = this;
         huff = huff.sortList();
+        // System.out.println("\nList after sorting: ");
+        // printLL(huff);
         Huffnodes rootN = buildHuffT(huff);
         return rootN;
     }
 
+    // public void buildEverything(int[] abcFreq){
+        
+    //     // System.out.println("Tree: ");
+    //     // printT(rootN);
+        
+    // }
     /**
      * Recursively performs a preorder traversal of the tree/subtree
      * whose root is specified, printing the keys of the visited nodes.
@@ -292,19 +270,23 @@ public class Huffnodes {
      * entire tree. 
      */
     private static void findBitC(Huffnodes root, String bitStr, String[] arr) {
-        //System.out.print(root.freq + " " + root.ch);
+        // System.out.println(root.ch);
+        if ((root.left == null) && (root.right == null)){
+            int asc = (int)root.ch;
+            // System.out.println(root.ch);
+            if((asc >= 0) && (asc <= 1000)){
+                arr[asc] = bitStr;
+            }
+        }
         if (root.left != null) {
+            // System.out.println(bitStr);
             findBitC(root.left,bitStr + "0",arr);
         }
         if (root.right != null) {
             findBitC(root.right, bitStr + "1",arr);
         }
 
-        if ((root.left == null) && (root.right == null)){
-            int asc = root.ch;
-            arr[asc] = bitStr;
-            //System.out.println(" ch: "+ root.ch + " str: " + bitStr);
-        }
+        
     }
     
 
@@ -316,56 +298,57 @@ public class Huffnodes {
      * @return code as String
     */
 
-    public String charToCode(char c, Huffnodes root, String[] arr){
-        int aC = c;
-        findBitC(root, null, arr);
-        String code = arr[aC];
-        return code;
+    public static void charsToCode(Huffnodes root, String[] arr){
+        findBitC(root, "", arr);
+    }
+
+    public static void printCode(String[] code){
+        for(int i = 0; i < code.length; i++){
+            if(code[i] != null){
+                System.out.print(" " + (char)i + " freq: " + code[i] + " ");
+            }
+        }
     }
     
 
     /**charConvert: final method used by Huffmann.java
      */
     public static String[] charConvert(int[] abcFreq){
-        String abc = "abcdefghijklmnopqrstuvwxyz";
-        Huffnodes huff = new Huffnodes(abc.charAt(0), abcFreq[0], null, null, null);
-        for(int i = 1; i < 26; i++){
-            huff = insertNode(huff, i, abc.charAt(i), abcFreq[0],null,null);
-        }
+        Huffnodes huff = buildLL(abcFreq);
         Huffnodes rootN = huff.buildT();
-        String[] code = new String[10000];
-        findBitC(rootN, "",code);
-
+        String[] code = new String[10001];
+        charsToCode(rootN, code);
+        //printCode(code);
         return code;
 
     }
-
-    public static void main(String[] args){
-        Huffnodes huff = new Huffnodes('c', 45, null, null, null);
-        huff = insertNode(huff, 1, 'l', 50,null,null);
-        huff = insertNode(huff, 2, 'r', 3,null,null);
-        huff = insertNode(huff, 3, 'a', 5,null,null);
-        huff = insertNode(huff, 4, 'b', 10,null,null);
-        
-        /*huff = huff.sortList();
-        print(huff);
-        huff = huff.mergeLowestF();
-        print(huff);
-        huff = huff.mergeLowestF();
-        print(huff);
-        huff = huff.mergeLowestF();
-        print(huff);
-        huff = huff.mergeLowestF();
-        print(huff);*/
-
-        Huffnodes rootN = huff.buildT();
-        String[] code = new String[10000];
-        findBitC(rootN, "",code);
-        for(int i = 0; i<code.length; i++){
-            if(code[i]!=null){
-                System.out.println((char)i +" " + code[i]);
-            }
+    /***
+     * printT: prints out all nodes of the tree
+     * @param root
+     */
+    public static void printT(Huffnodes root){
+        print(root);
+        if(root.left != null){
+            System.out.println();
+            System.out.println("L: ");
+            printT(root.left);
         }
+        if(root.right != null){
+            System.out.println();
+            System.out.println("R: ");
+            printT(root.right);
+    
+        }
+    }
+
+    //testing
+    public static void cTest(int[] abcFreq){
+        
+
+    }
+
+    public static void main(String[] args) throws FileNotFoundException{
+       
 
     }
 
