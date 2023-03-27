@@ -51,7 +51,12 @@ public class Huffnodes {
         if (huff == null) {
             return  0;
         } else {
-            return 1 + length(huff.next);
+            int l = 1;
+            while (huff.next != null){
+                l++;
+                huff = huff.next;
+            }
+            return l;
         }
     }
 
@@ -143,9 +148,7 @@ public class Huffnodes {
 
         if(curr.freq == 0){
             prev.next = curr.next;
-        } else {
-            prev = curr;
-        }
+        } 
 
         return huff;
     }
@@ -160,11 +163,13 @@ public class Huffnodes {
         Huffnodes prev = huff;
         Huffnodes cur = null;
         for(int i = 1; i < abcFreq.length; i++){
-            cur = new Huffnodes((char)i, abcFreq[i],null,null,null);
-            prev.next = cur;
-            prev = cur;
+            if (abcFreq[i]>0) {          
+                cur = new Huffnodes((char)i, abcFreq[i],null,null,null);
+                prev.next = cur;
+                prev = cur;             
+            }
         }
-        huff = bCleanLL(huff);
+        // huff = bCleanLL(huff);
         return huff;
     }
 
@@ -193,20 +198,19 @@ public class Huffnodes {
      * @return pointer to first node in LList
      */
 
-    public Huffnodes mergeLowestF(){
+    public Huffnodes mergeLowestF(int l){
         Huffnodes huff = this;
-        int l = length(huff);
         int ct = 1;
         if(l < 2){
             return huff;
         } else if (l==2){
-            Huffnodes merge = mergeNode(null,getNode(huff,0),getNode(huff,1), ct);
+            Huffnodes merge = mergeNode(null,huff,huff.next, ct);
             ct++;
             return merge;
         } else {
-            Huffnodes merge = mergeNode(null,getNode(huff,0),getNode(huff,1), ct);
+            Huffnodes merge = mergeNode(null,huff,huff.next, ct);
             ct++;
-            huff = getNode(huff,2);
+            huff = huff.next.next;
         
             if(huff.freq >= merge.freq){ //make merge the first node 
                 merge.next = huff;
@@ -218,7 +222,6 @@ public class Huffnodes {
                     if(merge.freq <= current.freq){ 
                         prev.next = merge; 
                         merge.next = current; 
-                        
                         return huff;
                     } else { 
                         prev = current; 
@@ -237,23 +240,27 @@ public class Huffnodes {
      * @param huff
      * @return root node
      */
-    public Huffnodes buildHuffT(Huffnodes huff){
-        if(length(huff) <= 1){
+    public Huffnodes buildHuffT(Huffnodes huff, int hlength){
+        if(hlength <= 1){
             return huff;
         } else {
-            huff = huff.mergeLowestF();
+            while (hlength >1){
+                huff = huff.mergeLowestF(hlength);
+                hlength--;
+            }           
             // System.out.println("\nList: ");
             // printLL(huff);
-            return buildHuffT(huff);
+            return huff;
         }
     }
 
     public Huffnodes buildT(){
         Huffnodes huff = this;
         huff = huff.sortList();
+        int hlength = length(huff);
         // System.out.println("\nList after sorting: ");
         // printLL(huff);
-        Huffnodes rootN = buildHuffT(huff);
+        Huffnodes rootN = buildHuffT(huff, hlength);
         return rootN;
     }
 
@@ -274,17 +281,19 @@ public class Huffnodes {
         if ((root.left == null) && (root.right == null)){
             int asc = (int)root.ch;
             // System.out.println(root.ch);
-            if((asc >= 0) && (asc <= 1000)){
+            if((asc >= 0) && (asc < 10000)){
                 arr[asc] = bitStr;
             }
+        } else {
+            if (root.left != null) {
+                // System.out.println(bitStr);
+                findBitC(root.left,bitStr + "0",arr);
+            }
+            if (root.right != null) {
+                findBitC(root.right, bitStr + "1",arr);
+            }
         }
-        if (root.left != null) {
-            // System.out.println(bitStr);
-            findBitC(root.left,bitStr + "0",arr);
-        }
-        if (root.right != null) {
-            findBitC(root.right, bitStr + "1",arr);
-        }
+        
 
         
     }
@@ -316,7 +325,12 @@ public class Huffnodes {
     public static String[] charConvert(int[] abcFreq){
         Huffnodes huff = buildLL(abcFreq);
         Huffnodes rootN = huff.buildT();
-        String[] code = new String[10001];
+
+        String[] code = new String[10000];
+        for(int i = 0; i < code.length; i++){
+            code[i] = "";
+        }
+        
         charsToCode(rootN, code);
         //printCode(code);
         return code;

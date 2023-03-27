@@ -1,0 +1,297 @@
+
+//EU Parlament texts\\
+
+//german----------
+ASCII TEXTS\EU Parlament\T1_DE.txt:
+Size of original file: 3642.0 bytes = 3.556640625 kbytes = 0.0034732818603515625 MB
+Size of new file: 2198.0 bytes = 2.146484375 kbytes = 0.0020961761474609375 MB
+Compression ratio:0.6035145524437122
+
+ASCII TEXTS\EU Parlament\T2_DE.txt:
+Size of original file: 65537.0 bytes = 64.0009765625 kbytes = 0.0625009536743164 MB
+Size of new file: 38184.375 bytes = 37.2894287109375 kbytes = 0.0364154577255249 MB
+Compression ratio:0.5826384332514457
+
+ASCII TEXTS\EU Parlament\T3_DE.txt:
+Size of original file: 83430.0 bytes = 81.474609375 kbytes = 0.07956504821777344 MB
+Size of new file: 48439.0 bytes = 47.3037109375 kbytes = 0.046195030212402344 MB
+Compression ratio:0.5805945103679732
+
+ASCII TEXTS\EU Parlament\T4_DE.txt:
+Size of original file: 130112.0 bytes = 127.0625 kbytes = 0.12408447265625 MB
+Size of new file: 75691.0 bytes = 73.9169921875 kbytes = 0.07218456268310547 MB
+Compression ratio:0.5817372725036891
+
+ASCII TEXTS\EU Parlament\T5_DE.txt:
+Size of original file: 102528.0 bytes = 100.125 kbytes = 0.0977783203125 MB
+Size of new file: 60803.875 bytes = 59.3787841796875 kbytes = 0.057987093925476074 MB
+Compression ratio:0.5930465336298377
+
+ASCII TEXTS\EU Parlament\T6_DE.txt:
+Size of original file: 10474.0 bytes = 10.228515625 kbytes = 0.009988784790039062 MB
+Size of new file: 6154.375 bytes = 6.0101318359375 kbytes = 0.005869269371032715 MB
+Compression ratio:0.5875859270574757
+
+ASCII TEXTS\EU Parlament\T7_DE.txt:
+Size of original file: 28819.0 bytes = 28.1435546875 kbytes = 0.02748394012451172 MB
+Size of new file: 16371.0 bytes = 15.9873046875 kbytes = 0.015612602233886719 MB
+Compression ratio:0.5680627363891877
+
+ASCII TEXTS\EU Parlament\T8_DE.txt:
+Size of original file: 34086.0 bytes = 33.287109375 kbytes = 0.03250694274902344 MB
+Size of new file: 20066.25 bytes = 19.595947265625 kbytes = 0.019136667251586914 MB
+Compression ratio:0.5886947720471748
+
+ASCII TEXTS\EU Parlament\T9_DE.txt:
+Size of original file: 12505.0 bytes = 12.2119140625 kbytes = 0.011925697326660156 MB
+Size of new file: 7403.25 bytes = 7.229736328125 kbytes = 0.00706028938293457 MB
+Compression ratio:0.5920231907237106
+
+ASCII TEXTS\EU Parlament\T10_DE.txt:
+Size of original file: 44405.0 bytes = 43.3642578125 kbytes = 0.04234790802001953 MB
+Size of new file: 25869.75 bytes = 25.263427734375 kbytes = 0.024671316146850586 MB
+Compression ratio:0.5825864204481477
+
+//french---------------
+
+ASCII TEXTS\EU Parlament\T1_FR.txt:
+Size of original file: 14122.0 bytes = 13.791015625 kbytes = 0.013467788696289062 MB
+Size of new file: 8266.75 bytes = 8.072998046875 kbytes = 0.007883787155151367 MB
+Compression ratio:0.5853809658688571
+
+ASCII TEXTS\EU Parlament\T2_FR.txt:
+Size of original file: 63137.0 bytes = 61.6572265625 kbytes = 0.060212135314941406 MB
+Size of new file: 34785.25 bytes = 33.969970703125 kbytes = 0.03317379951477051 MB
+Compression ratio:0.5509487305383531
+
+ASCII TEXTS\EU Parlament\T3_FR.txt:
+Size of original file: 87154.0 bytes = 85.111328125 kbytes = 0.08311653137207031 MB
+Size of new file: 48158.875 bytes = 47.0301513671875 kbytes = 0.04592788219451904 MB
+Compression ratio:0.5525721710994332
+
+ASCII TEXTS\EU Parlament\T4_FR.txt:
+Size of original file: 130483.0 bytes = 127.4248046875 kbytes = 0.12443828582763672 MB
+Size of new file: 72462.25 bytes = 70.763916015625 kbytes = 0.06910538673400879 MB
+Compression ratio:0.5553386264877417
+
+ASCII TEXTS\EU Parlament\T5_FR.txt:
+Size of original file: 105026.0 bytes = 102.564453125 kbytes = 0.10016059875488281 MB
+Size of new file: 59501.125 bytes = 58.1065673828125 kbytes = 0.05674469470977783 MB
+Compression ratio:0.5665370955763335
+
+ASCII TEXTS\EU Parlament\T6_FR.txt:
+Size of original file: 10201.0 bytes = 9.9619140625 kbytes = 0.009728431701660156 MB
+Size of new file: 5636.0 bytes = 5.50390625 kbytes = 0.005374908447265625 MB
+Compression ratio:0.5524948534457406
+
+ASCII TEXTS\EU Parlament\T7_FR.txt:
+Size of original file: 26564.0 bytes = 25.94140625 kbytes = 0.025333404541015625 MB
+Size of new file: 14362.625 bytes = 14.0260009765625 kbytes = 0.013697266578674316 MB
+Compression ratio:0.5406800557145008
+
+ASCII TEXTS\EU Parlament\T8_FR.txt:
+Size of original file: 33394.0 bytes = 32.611328125 kbytes = 0.03184700012207031 MB
+Size of new file: 18544.125 bytes = 18.1094970703125 kbytes = 0.01768505573272705 MB
+Compression ratio:0.5553130801940468
+
+ASCII TEXTS\EU Parlament\T9_FR.txt:
+Size of original file: 12208.0 bytes = 11.921875 kbytes = 0.0116424560546875 MB
+Size of new file: 6891.375 bytes = 6.7298583984375 kbytes = 0.006572127342224121 MB
+Compression ratio:0.5644966415465269
+
+ASCII TEXTS\EU Parlament\T10_FR.txt:
+Size of original file: 42636.0 bytes = 41.63671875 kbytes = 0.040660858154296875 MB
+Size of new file: 23464.25 bytes = 22.914306640625 kbytes = 0.02237725257873535 MB
+Compression ratio:0.5503389154704944
+
+//english------------
+
+ASCII TEXTS\EU Parlament\T1_EN.txt:
+Size of original file: 3281.0 bytes = 3.2041015625 kbytes = 0.0031290054321289062 MB
+Size of new file: 1906.25 bytes = 1.861572265625 kbytes = 0.001817941665649414 MB
+Compression ratio:0.5809966473636087
+
+ASCII TEXTS\EU Parlament\T2_EN.txt:
+Size of original file: 52435.0 bytes = 51.2060546875 kbytes = 0.05000591278076172 MB
+Size of new file: 29425.375 bytes = 28.7357177734375 kbytes = 0.02806222438812256 MB
+Compression ratio:0.5611781252979879
+
+ASCII TEXTS\EU Parlament\T3_EN.txt:
+Size of original file: 72889.0 bytes = 71.1806640625 kbytes = 0.06951236724853516 MB
+Size of new file: 40836.375 bytes = 39.8792724609375 kbytes = 0.03894460201263428 MB
+Compression ratio:0.5602542907708982
+
+ASCII TEXTS\EU Parlament\T4_EN.txt:
+Size of original file: 118446.0 bytes = 115.669921875 kbytes = 0.11295890808105469 MB
+Size of new file: 66316.875 bytes = 64.7625732421875 kbytes = 0.06324470043182373 MB
+Compression ratio:0.5598912162504432
+
+ASCII TEXTS\EU Parlament\T5_EN.txt:
+Size of original file: 94491.0 bytes = 92.2763671875 kbytes = 0.09011363983154297 MB
+Size of new file: 54254.125 bytes = 52.9825439453125 kbytes = 0.05174076557159424 MB
+Compression ratio:0.5741724079541967
+
+ASCII TEXTS\EU Parlament\T6_EN.txt:
+Size of original file: 8836.0 bytes = 8.62890625 kbytes = 0.008426666259765625 MB
+Size of new file: 5003.125 bytes = 4.8858642578125 kbytes = 0.0047713518142700195 MB
+Compression ratio:0.5662205749207786
+
+ASCII TEXTS\EU Parlament\T7_EN.txt:
+Size of original file: 23732.0 bytes = 23.17578125 kbytes = 0.022632598876953125 MB
+Size of new file: 13100.625 bytes = 12.7935791015625 kbytes = 0.012493729591369629 MB
+Compression ratio:0.5520236389684814
+
+ASCII TEXTS\EU Parlament\T8_EN.txt:
+Size of original file: 28618.0 bytes = 27.947265625 kbytes = 0.027292251586914062 MB
+Size of new file: 16212.5 bytes = 15.83251953125 kbytes = 0.015461444854736328 MB
+Compression ratio:0.5665140820462646
+
+ASCII TEXTS\EU Parlament\T9_EN.txt:
+Size of original file: 10262.0 bytes = 10.021484375 kbytes = 0.009786605834960938 MB
+Size of new file: 5930.375 bytes = 5.7913818359375 kbytes = 0.005655646324157715 MB
+Compression ratio:0.5778966088481777
+
+ASCII TEXTS\EU Parlament\T10_EN.txt:
+Size of original file: 36503.0 bytes = 35.6474609375 kbytes = 0.034811973571777344 MB
+Size of new file: 20446.875 bytes = 19.9676513671875 kbytes = 0.019499659538269043 MB
+Compression ratio:0.5601423170698299
+
+//spanish-------------
+
+ASCII TEXTS\EU Parlament\T1_ES.txt:
+Size of original file: 3490.0 bytes = 3.408203125 kbytes = 0.0033283233642578125 MB
+Size of new file: 2023.625 bytes = 1.9761962890625 kbytes = 0.0019298791885375977 MB
+Compression ratio:0.5798352435530086
+
+ASCII TEXTS\EU Parlament\T2_ES.txt:
+Size of original file: 60875.0 bytes = 59.4482421875 kbytes = 0.05805492401123047 MB
+Size of new file: 33799.0 bytes = 33.0068359375 kbytes = 0.032233238220214844 MB
+Compression ratio:0.5552197125256674
+
+ASCII TEXTS\EU Parlament\T3_ES.txt:
+Size of original file: 85120.0 bytes = 83.125 kbytes = 0.0811767578125 MB
+Size of new file: 47077.5 bytes = 45.97412109375 kbytes = 0.044896602630615234 MB
+Compression ratio:0.5530721334586466
+
+ASCII TEXTS\EU Parlament\T4_ES.txt:
+Size of original file: 127183.0 bytes = 124.2021484375 kbytes = 0.1212911605834961 MB
+Size of new file: 70338.5 bytes = 68.68994140625 kbytes = 0.06708002090454102 MB
+Compression ratio:0.5530495427848061
+
+ASCII TEXTS\EU Parlament\T5_ES.txt:
+Size of original file: 104818.0 bytes = 102.361328125 kbytes = 0.09996223449707031 MB
+Size of new file: 59496.25 bytes = 58.101806640625 kbytes = 0.05674004554748535 MB
+Compression ratio:0.5676148180655994
+
+ASCII TEXTS\EU Parlament\T6_ES.txt:
+Size of original file: 10230.0 bytes = 9.990234375 kbytes = 0.009756088256835938 MB
+Size of new file: 5716.5 bytes = 5.58251953125 kbytes = 0.005451679229736328 MB
+Compression ratio:0.5587976539589443
+
+ASCII TEXTS\EU Parlament\T7_ES.txt:
+Size of original file: 25635.0 bytes = 25.0341796875 kbytes = 0.02444744110107422 MB
+Size of new file: 13990.0 bytes = 13.662109375 kbytes = 0.013341903686523438 MB
+Compression ratio:0.5457382484883948
+
+ASCII TEXTS\EU Parlament\T8_ES.txt:
+Size of original file: 33675.0 bytes = 32.8857421875 kbytes = 0.03211498260498047 MB
+Size of new file: 18839.625 bytes = 18.3980712890625 kbytes = 0.017966866493225098 MB
+Compression ratio:0.5594543429844098
+
+ASCII TEXTS\EU Parlament\T9_ES.txt:
+Size of original file: 12686.0 bytes = 12.388671875 kbytes = 0.012098312377929688 MB
+Size of new file: 7110.0 bytes = 6.943359375 kbytes = 0.0067806243896484375 MB
+Compression ratio:0.5604603499921172
+
+ASCII TEXTS\EU Parlament\T10_ES.txt:
+Size of original file: 42558.0 bytes = 41.560546875 kbytes = 0.04058647155761719 MB
+Size of new file: 23600.125 bytes = 23.0469970703125 kbytes = 0.02250683307647705 MB
+Compression ratio:0.5545402744489872
+
+//italien----------------
+
+ASCII TEXTS\EU Parlament\T1_IT.txt:
+Size of original file: 3402.0 bytes = 3.322265625 kbytes = 0.0032444000244140625 MB
+Size of new file: 1936.625 bytes = 1.8912353515625 kbytes = 0.001846909523010254 MB
+Compression ratio:0.5692607289829512
+
+ASCII TEXTS\EU Parlament\T2_IT.txt:
+Size of original file: 59742.0 bytes = 58.341796875 kbytes = 0.05697441101074219 MB
+Size of new file: 32516.25 bytes = 31.754150390625 kbytes = 0.031009912490844727 MB
+Compression ratio:0.5442778949482776
+
+ASCII TEXTS\EU Parlament\T3_IT.txt:
+Size of original file: 81511.0 bytes = 79.6005859375 kbytes = 0.07773494720458984 MB
+Size of new file: 44396.5 bytes = 43.35595703125 kbytes = 0.04233980178833008 MB
+Compression ratio:0.5446688177055857
+
+ASCII TEXTS\EU Parlament\T4_IT.txt:
+Size of original file: 123011.0 bytes = 120.1279296875 kbytes = 0.11731243133544922 MB
+Size of new file: 66868.875 bytes = 65.3016357421875 kbytes = 0.06377112865447998 MB
+Compression ratio:0.5436007755403989
+
+ASCII TEXTS\EU Parlament\T5_IT.txt:
+Size of original file: 102964.0 bytes = 100.55078125 kbytes = 0.09819412231445312 MB
+Size of new file: 57930.375 bytes = 56.5726318359375 kbytes = 0.055246710777282715 MB
+Compression ratio:0.5626274717376947
+
+ASCII TEXTS\EU Parlament\T6_IT.txt:
+Size of original file: 9788.0 bytes = 9.55859375 kbytes = 0.009334564208984375 MB
+Size of new file: 5364.75 bytes = 5.239013671875 kbytes = 0.00511622428894043 MB
+Compression ratio:0.5480946056395587
+
+ASCII TEXTS\EU Parlament\T7_IT.txt:
+Size of original file: 25681.0 bytes = 25.0791015625 kbytes = 0.024491310119628906 MB
+Size of new file: 13752.625 bytes = 13.4302978515625 kbytes = 0.013115525245666504 MB
+Compression ratio:0.5355175032124917
+
+ASCII TEXTS\EU Parlament\T8_IT.txt:
+Size of original file: 33238.0 bytes = 32.458984375 kbytes = 0.03169822692871094 MB
+Size of new file: 18345.25 bytes = 17.915283203125 kbytes = 0.017495393753051758 MB
+Compression ratio:0.5519360370660088
+
+ASCII TEXTS\EU Parlament\T9_IT.txt:
+Size of original file: 12019.0 bytes = 11.7373046875 kbytes = 0.011462211608886719 MB
+Size of new file: 6677.25 bytes = 6.520751953125 kbytes = 0.006367921829223633 MB
+Compression ratio:0.5555578667110409
+
+ASCII TEXTS\EU Parlament\T10_IT.txt:
+Size of original file: 41259.0 bytes = 40.2919921875 kbytes = 0.03934764862060547 MB
+Size of new file: 22472.5 bytes = 21.94580078125 kbytes = 0.021431446075439453 MB
+Compression ratio:0.5446690419060084
+
+
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
+//UN Chart Text in English, French and Spanish\\
+
+UN_TEXTS\\UNC_EN.txt:
+Size of original file: 58205.0 bytes = 56.8408203125 kbytes = 0.05550861358642578 MB
+Size of new file: 31756.75 bytes = 31.012451171875 kbytes = 0.03028559684753418 MB
+Compression ratio:0.5456017524267675
+
+UN_TEXTS\\UNC_ES.txt:
+Size of original file: 39523.0 bytes = 38.5966796875 kbytes = 0.03769207000732422 MB
+Size of new file: 21833.375 bytes = 21.3216552734375 kbytes = 0.02082192897796631 MB
+Compression ratio:0.5524220074387066
+
+UN_TEXTS\\UNC_FR.txt:
+Size of original file: 41502.0 bytes = 40.529296875 kbytes = 0.03957939147949219 MB
+Size of new file: 23068.125 bytes = 22.5274658203125 kbytes = 0.021999478340148926 MB
+Compression ratio:0.5558316466676305
+
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+
+//Welcome Text LFV
+
+//german
+LFV-texts\\LFV_DE.txt:
+Size of original file: 1412.0 bytes = 1.37890625 kbytes = 0.001346588134765625 MB
+Size of new file: 803.375 bytes = 0.7845458984375 kbytes = 7.661581039428711E-4 MB
+Compression ratio:0.5689624645892352
+
+//french
+LFV-texts\\LFV_FR.txt:
+Size of original file: 1258.0 bytes = 1.228515625 kbytes = 0.0011997222900390625 MB
+Size of new file: 702.375 bytes = 0.6859130859375 kbytes = 6.698369979858398E-4 MB
+Compression ratio:0.5583267090620032

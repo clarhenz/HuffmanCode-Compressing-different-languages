@@ -15,23 +15,27 @@ public class Huffman extends Huffnodes{
         super(' ',0,null,null,null);
 
     }
-
-    
-   
         
     //returns the frequency of letters
-
     public static int freq(String text, char n){
-        if(text == ""){
-            return 0;
-        } else {
-            if (n == text.charAt(0)){
-                return 1 + freq(text.substring(1),n);
-            } else {
-                return freq(text.substring(1),n);
+        int ct = 0;
+        for (int i = 0; i < text.length(); i++){
+            if (text.charAt(i) == n){
+                ct++;
             }
         }
+        return ct;
     }
+    //    if(text == ""){
+    //        return 0;
+    //    } else {
+    //        if (n == text.charAt(0)){
+    //            return 1 + freq(text.substring(1),n);
+    //        } else {
+    //            return freq(text.substring(1),n);
+    //        }
+    //    }
+    //}
 
     /**
      * xLine - takes File return the xth line of text
@@ -54,13 +58,22 @@ public class Huffman extends Huffnodes{
      * returns an array containing the frequency of all letters
      * */
 
-    public static int[] freqLine(String text){
+    public static int freqLine(String text, int[] freqA){
         
-        int[] freqA = new int[10000];
-        for(int i = 0; i < 10000;i++){
-            freqA[i] = freq(text, (char)i);
+        //int[] freqA = new int[10000];
+        int skipped = 0;
+        for(int i = 0; i < text.length(); i++){
+            int j = (int)text.charAt(i);
+            if ((j>= 0) && (j<10000)){
+                freqA[j]++;
+            } else {
+                skipped++;
+            }
         }
-        return freqA;
+        //for(int i = 0; i < 10000;i++){
+        //    freqA[i] = freq(text, (char)i);
+        //}
+        return skipped;
     }
 
     /** addArrays: takes two int arrays and adds their content in a thrid array
@@ -100,11 +113,15 @@ public class Huffman extends Huffnodes{
     public static int[] freqText(String fileName) throws FileNotFoundException{
         int[] freqA = new int[10001];
         Scanner input = new Scanner(new File(fileName));
+        int skipped = 0;
         while (input.hasNextLine()) {
             String line = input.nextLine();
-            freqA = addArrays(freqA,freqLine(line));
+            skipped = skipped + freqLine(line, freqA); 
+            //addArrays(freqA,freqLine(line));
         }
-
+        if (skipped > 0) {
+            System.out.println("skipped chars:" + skipped);
+        }
         return freqA;
     }
 
@@ -113,37 +130,52 @@ public class Huffman extends Huffnodes{
 
         int[] freqABC = new int[10001];
         freqABC = freqText(filename);
-        System.out.println();
         String[] code = charConvert(freqABC);
         String f = "";
         int count = 0;
+        int flength = 0;
         while (console.hasNextLine()) {
             String line = console.nextLine();
             for(int i = 0; i < line.length(); i++){
-                if(((int)line.charAt(i)) < code.length){
-                    f = f + code[(int)line.charAt(i)];
-                    
+                int j = (int)line.charAt(i);
+                if((j  >= 0) && (j < code.length)) {
+                    String cur = code[j];
+                    flength = flength + cur.length();
+                    f = f + cur;  
                 } else {
                     count++;
+                    //System.out.println("number of skipped ch so far: " + count);
                 }
                 
             }
         } 
-        System.out.println("number of skipped ch: " + count);
+        //System.out.println("total number of skipped ch: " + count);
         console.close();
+        //System.out.println("new file length:" + flength/8.0 + " bytes = " + 1.0* flength/(8.0*1024) + " kbytes = " + 1.0* flength/(8.0*1024*1024) + " MB");
         return f;
     }
    
-    public static void main(String[] args) throws FileNotFoundException{
-        Scanner console = new Scanner(System.in);
-        
-        System.out.print("File Name: ");
-        String filename = console.nextLine();
-        File original = new File(filename);
-        System.out.println("Size of original file: " + original.length() + " bytes");
 
-        String c =  finalCode(filename);
-        
+    public static void writeResult(File summaryF, String filename, double olength, double l2) throws FileNotFoundException{
+        //Write in summary File
+        double ratio = l2/olength;
+        try{
+            FileWriter myWriter = new FileWriter(summaryF,true);
+            myWriter.write("\n");
+            myWriter.write(filename + ":");
+            myWriter.write("\nSize of original file: " + olength + " bytes = " + olength/(1024) + " kbytes = " + olength/(1024*1024) + " MB");
+            myWriter.write("\nSize of new file: " + l2 + " bytes = " + l2/(1024) + " kbytes = " + l2/(1024*1024) + " MB");
+            myWriter.write("\nCompression ratio:" + ratio);
+            myWriter.write("\n");
+            myWriter.close();
+            // System.out.println("Success");
+        }catch (IOException e){
+            System.out.println("An error occured");
+            e.printStackTrace();
+        }
+    }    
+
+    public static void writeCodeToFile(String code, String filename) throws FileNotFoundException {
         //create a File
         String filename2 = filename.substring(0,(filename.length() - 4)) + "-compressed.txt";
         File compressed = new File(filename2);
@@ -151,28 +183,116 @@ public class Huffman extends Huffnodes{
             if(compressed.createNewFile()){
                 System.out.println("File created: " + compressed.getName());
             }else{
-                System.out.println("File " + compressed.getName() + " already exists");
-            }
-            
+                ;
+                // System.out.println("File " + compressed.getName() + " already exists");
+            }      
         }catch (IOException e){
             System.out.println("An error occured");
             e.printStackTrace();
-        }
-
+        }   
         //write in file
         try{
             FileWriter myWriter = new FileWriter(filename2);
-            myWriter.write(c);
+            myWriter.write(code);
             myWriter.close();
-            System.out.println("Success");
+            // System.out.println("Success");
         }catch (IOException e){
             System.out.println("An error occured");
             e.printStackTrace();
         }
+    }
 
-        
-        System.out.println("Size of new file: " + compressed.length()/8.0 + " bytes");
+    public static void processFile(File summaryF, String filename) throws FileNotFoundException {
+        File original = new File(filename);
+        double l1 = 1.0*original.length();
+        System.out.println(filename +": "+ "Size of original file: " + l1 + " bytes = " + l1/(1024) + " kbytes = " + l1/(1024*1024) + " MB");
 
+        String code =  finalCode(filename); 
+        writeCodeToFile(code, filename);
+
+        double l2 = (code.length())/8.0;          
+        System.out.println("Size of new file: " + l2 + " bytes = " + l2/(1024) + " kbytes = " + l2/(1024*1024) + " MB");
+        double ratio = l2/l1;
+        System.out.println("Compression ratio:" + ratio);
+    
+        writeResult(summaryF, filename, l1, l2);
+
+    }
+
+    public static double fileRatio(String filename) throws FileNotFoundException {
+        File original = new File(filename);
+        double l1 = 1.0*original.length();
+        String code =  finalCode(filename); 
+
+        double l2 = (code.length())/8.0;          
+        double ratio = l2/l1;
+        return ratio;
+
+    }
+
+    public static double lsum(String filename) throws FileNotFoundException {       
+        String part = filename;
+        double mySum = 0;
+        for (int i = 1; i<11; i++){
+            filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt";
+            mySum = mySum + fileRatio(filename);
+        }
+        return mySum;
+    }
+
+    public static double lmean(String filename) throws FileNotFoundException {       
+        double mySum = lsum(filename);
+        double mean = mySum/10.0;
+        return mean;
+    }
+
+    public static double ldeviantion(String filename) throws FileNotFoundException { 
+        String part = filename;
+        double mean = lmean(filename);    
+        double deviation = 0.0;
+
+        for (int i = 1; i<11; i++){
+            filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt";
+            deviation = deviation + ((fileRatio(filename) - mean)*(fileRatio(filename) - mean));
+        }
+        deviation = deviation/(10.0-1);
+        deviation = Math.sqrt(deviation);
+        return deviation;
+    }
+    public static void main(String[] args) throws FileNotFoundException{
+
+
+
+        //Create Summary File
+        // String summary = "SizeDifference.txt";
+        // File summaryF = new File(summary);
+        // try{
+        //     if(summaryF.createNewFile()){
+        //         System.out.println("File created: " + summaryF.getName());
+        //     }else{
+        //         ;
+        //         // System.out.println("File " + summaryF.getName() + " already exists");
+        //     }
+        // }catch (IOException e){
+        //     System.out.println("An error occured");
+        //     e.printStackTrace();
+        // }
+
+        Scanner console = new Scanner(System.in);
+        System.out.print("File Name: ");
+        String filename = console.nextLine();
         console.close();
+
+        System.out.println(ldeviantion(filename));
+        // if (filename.contains(".txt")) {
+        //     processFile(summaryF, filename);
+        // } else {
+            
+        //     String part = filename;
+        //     for (int i = 1; i<11; i++){
+        //         filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt";
+        //         processFile(summaryF, filename);
+        //     }   
+        // }
     }
 }
