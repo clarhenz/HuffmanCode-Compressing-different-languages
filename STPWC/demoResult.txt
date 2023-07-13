@@ -1,0 +1,35 @@
+
+demoWrite.txt:
+Size of original file: 5.0 bytes = 0.0048828125 kbytes = 4.76837158203125E-6 MB
+Size of new file: 1.375 bytes = 0.0013427734375 kbytes = 1.3113021850585938E-6 MB
+Compression ratio:0.275
+
+demoWrite.txt:
+Size of original file: 40.0 bytes = 0.0390625 kbytes = 3.814697265625E-5 MB
+Size of new file: 19.625 bytes = 0.0191650390625 kbytes = 1.8715858459472656E-5 MB
+Compression ratio:0.490625
+
+demoWrite.txt:
+Size of original file: 30.0 bytes = 0.029296875 kbytes = 2.86102294921875E-5 MB
+Size of new file: 14.375 bytes = 0.0140380859375 kbytes = 1.3709068298339844E-5 MB
+Compression ratio:0.4791666666666667
+
+demoWrite.txt:
+Size of original file: 18.0 bytes = 0.017578125 kbytes = 1.71661376953125E-5 MB
+Size of new file: 8.0 bytes = 0.0078125 kbytes = 7.62939453125E-6 MB
+Compression ratio:0.4444444444444444
+
+demoWrite.txt:
+Size of original file: 44.0 bytes = 0.04296875 kbytes = 4.1961669921875E-5 MB
+Size of new file: 21.875 bytes = 0.0213623046875 kbytes = 2.086162567138672E-5 MB
+Compression ratio:0.4971590909090909
+
+demoWrite.txt:
+Size of original file: 11.0 bytes = 0.0107421875 kbytes = 1.049041748046875E-5 MB
+Size of new file: 4.125 bytes = 0.0040283203125 kbytes = 3.933906555175781E-6 MB
+Compression ratio:0.375
+
+demoWrite.txt:
+Size of original file: 14.0 bytes = 0.013671875 kbytes = 1.33514404296875E-5 MB
+Size of new file: 5.5 bytes = 0.00537109375 kbytes = 5.245208740234375E-6 MB
+Compression ratio:0.39285714285714285
