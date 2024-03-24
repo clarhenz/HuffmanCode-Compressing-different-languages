@@ -57,3 +57,8 @@ ChatGBT/ShSonnet8_ChatGBT.txt:
 Size of original file: 614.0 bytes = 0.599609375 kbytes = 5.855560302734375E-4 MB
 Size of new file: 327.375 bytes = 0.3197021484375 kbytes = 3.122091293334961E-4 MB
 Compression ratio:0.5331840390879479
+
+ChatGBT/ShSonnet9_ChatGBT.txt:
+Size of original file: 621.0 bytes = 0.6064453125 kbytes = 5.922317504882812E-4 MB
+Size of new file: 330.375 bytes = 0.3226318359375 kbytes = 3.1507015228271484E-4 MB
+Compression ratio:0.5320048309178744
