@@ -1,9 +1,3 @@
-
-ChatGBT/ShakespeareSonet_ChatGBT.txt:
-Size of original file: 0.0 bytes = 0.0 kbytes = 0.0 MB
-Size of new file: 0.0 bytes = 0.0 kbytes = 0.0 MB
-Compression ratio:NaN
-
 ChatGBT/ShakespeareSonet_ChatGBT.txt:
 Size of original file: 625.0 bytes = 0.6103515625 kbytes = 5.960464477539062E-4 MB
 Size of new file: 333.625 bytes = 0.3258056640625 kbytes = 3.1816959381103516E-4 MB
