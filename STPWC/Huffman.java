@@ -385,8 +385,8 @@ public class Huffman extends Huffnodes{
     }
 
     public static void main(String[] args) throws FileNotFoundException{
-        //convertAndWrite();
+        convertAndWrite();
         //fStats("deviationASCII.txt");
-        demo();
+        //demo();
     }
 }
