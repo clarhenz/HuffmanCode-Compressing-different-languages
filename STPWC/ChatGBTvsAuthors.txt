@@ -1,4 +1,24 @@
+// Actual Shakespeare
+
+Shakespeare\\Sonnet3.txt:
+Size of original file: 628.0 bytes = 0.61328125 kbytes = 5.98907470703125E-4 MB
+Size of new file: 331.0 bytes = 0.3232421875 kbytes = 3.1566619873046875E-4 MB
+Compression ratio:0.5270700636942676
+
+Shakespeare\\Sonnet37.txt:
+Size of original file: 601.0 bytes = 0.5869140625 kbytes = 5.731582641601562E-4 MB
+Size of new file: 320.5 bytes = 0.31298828125 kbytes = 3.056526184082031E-4 MB
+Compression ratio:0.5332778702163061
+
+Shakespeare\\Sonnet81.txt:
+Size of original file: 642.0 bytes = 0.626953125 kbytes = 6.122589111328125E-4 MB
+Size of new file: 335.25 bytes = 0.327392578125 kbytes = 3.197193145751953E-4 MB
+Compression ratio:0.522196261682243
+
+//CHAT_GBT
+
 ChatGBT/ShakespeareSonet_ChatGBT.txt:
 Size of original file: 625.0 bytes = 0.6103515625 kbytes = 5.960464477539062E-4 MB
 Size of new file: 333.625 bytes = 0.3258056640625 kbytes = 3.1816959381103516E-4 MB
 Compression ratio:0.5338
+
