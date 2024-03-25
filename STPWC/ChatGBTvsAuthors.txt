@@ -1,9 +1,44 @@
 // Actual Shakespeare
 
+Shakespeare/Sonnet1.txt:
+Size of original file: 622.0 bytes = 0.607421875 kbytes = 5.931854248046875E-4 MB
+Size of new file: 326.0 bytes = 0.318359375 kbytes = 3.108978271484375E-4 MB
+Compression ratio:0.5241157556270096
+
+Shakespeare/Sonnet2.txt:
+Size of original file: 643.0 bytes = 0.6279296875 kbytes = 6.132125854492188E-4 MB
+Size of new file: 340.375 bytes = 0.3323974609375 kbytes = 3.2460689544677734E-4 MB
+Compression ratio:0.5293545878693624
+
 Shakespeare\\Sonnet3.txt:
 Size of original file: 628.0 bytes = 0.61328125 kbytes = 5.98907470703125E-4 MB
 Size of new file: 331.0 bytes = 0.3232421875 kbytes = 3.1566619873046875E-4 MB
 Compression ratio:0.5270700636942676
+
+Shakespeare/Sonnet4.txt:
+Size of original file: 594.0 bytes = 0.580078125 kbytes = 5.664825439453125E-4 MB
+Size of new file: 314.375 bytes = 0.3070068359375 kbytes = 2.9981136322021484E-4 MB
+Compression ratio:0.5292508417508418
+
+Shakespeare/Sonnet5.txt:
+Size of original file: 632.0 bytes = 0.6171875 kbytes = 6.0272216796875E-4 MB
+Size of new file: 337.5 bytes = 0.32958984375 kbytes = 3.218650817871094E-4 MB
+Compression ratio:0.5340189873417721
+
+Shakespeare/Sonnet6.txt:
+Size of original file: 619.0 bytes = 0.6044921875 kbytes = 5.903244018554688E-4 MB
+Size of new file: 324.5 bytes = 0.31689453125 kbytes = 3.094673156738281E-4 MB
+Compression ratio:0.524232633279483
+
+Shakespeare/Sonnet7.txt:
+Size of original file: 589.0 bytes = 0.5751953125 kbytes = 5.617141723632812E-4 MB
+Size of new file: 317.0 bytes = 0.3095703125 kbytes = 3.0231475830078125E-4 MB
+Compression ratio:0.5382003395585738
+
+Shakespeare/Sonnet8.txt:
+Size of original file: 655.0 bytes = 0.6396484375 kbytes = 6.246566772460938E-4 MB
+Size of new file: 348.375 bytes = 0.3402099609375 kbytes = 3.3223628997802734E-4 MB
+Compression ratio:0.5318702290076336
 
 Shakespeare\\Sonnet37.txt:
 Size of original file: 601.0 bytes = 0.5869140625 kbytes = 5.731582641601562E-4 MB
@@ -68,37 +103,4 @@ Size of original file: 601.0 bytes = 0.5869140625 kbytes = 5.731582641601562E-4 
 Size of new file: 317.75 bytes = 0.310302734375 kbytes = 3.0303001403808594E-4 MB
 Compression ratio:0.528702163061564
 
-Shakespeare/Sonnet1.txt:
-Size of original file: 622.0 bytes = 0.607421875 kbytes = 5.931854248046875E-4 MB
-Size of new file: 326.0 bytes = 0.318359375 kbytes = 3.108978271484375E-4 MB
-Compression ratio:0.5241157556270096
 
-Shakespeare/Sonnet2.txt:
-Size of original file: 643.0 bytes = 0.6279296875 kbytes = 6.132125854492188E-4 MB
-Size of new file: 340.375 bytes = 0.3323974609375 kbytes = 3.2460689544677734E-4 MB
-Compression ratio:0.5293545878693624
-
-Shakespeare/Sonnet4.txt:
-Size of original file: 594.0 bytes = 0.580078125 kbytes = 5.664825439453125E-4 MB
-Size of new file: 314.375 bytes = 0.3070068359375 kbytes = 2.9981136322021484E-4 MB
-Compression ratio:0.5292508417508418
-
-Shakespeare/Sonnet5.txt:
-Size of original file: 632.0 bytes = 0.6171875 kbytes = 6.0272216796875E-4 MB
-Size of new file: 337.5 bytes = 0.32958984375 kbytes = 3.218650817871094E-4 MB
-Compression ratio:0.5340189873417721
-
-Shakespeare/Sonnet6.txt:
-Size of original file: 619.0 bytes = 0.6044921875 kbytes = 5.903244018554688E-4 MB
-Size of new file: 324.5 bytes = 0.31689453125 kbytes = 3.094673156738281E-4 MB
-Compression ratio:0.524232633279483
-
-Shakespeare/Sonnet7.txt:
-Size of original file: 589.0 bytes = 0.5751953125 kbytes = 5.617141723632812E-4 MB
-Size of new file: 317.0 bytes = 0.3095703125 kbytes = 3.0231475830078125E-4 MB
-Compression ratio:0.5382003395585738
-
-Shakespeare/Sonnet8.txt:
-Size of original file: 655.0 bytes = 0.6396484375 kbytes = 6.246566772460938E-4 MB
-Size of new file: 348.375 bytes = 0.3402099609375 kbytes = 3.3223628997802734E-4 MB
-Compression ratio:0.5318702290076336
