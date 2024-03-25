@@ -179,4 +179,17 @@ Size of original file: 518.0 bytes = 0.505859375 kbytes = 4.940032958984375E-4 M
 Size of new file: 276.75 bytes = 0.270263671875 kbytes = 2.639293670654297E-4 MB
 Compression ratio:0.5342664092664092
 
+ChatGBT/RiGedicht9_ChatGBT.txt:
+Size of original file: 584.0 bytes = 0.5703125 kbytes = 5.5694580078125E-4 MB
+Size of new file: 317.875 bytes = 0.3104248046875 kbytes = 3.031492233276367E-4 MB
+Compression ratio:0.544306506849315
 
+ChatGBT/RiGedicht9_ChatGBT.txt:
+Size of original file: 584.0 bytes = 0.5703125 kbytes = 5.5694580078125E-4 MB
+Size of new file: 317.875 bytes = 0.3104248046875 kbytes = 3.031492233276367E-4 MB
+Compression ratio:0.544306506849315
+
+ChatGBT/RiGedicht10_ChatGBT.txt:
+Size of original file: 543.0 bytes = 0.5302734375 kbytes = 5.178451538085938E-4 MB
+Size of new file: 287.25 bytes = 0.280517578125 kbytes = 2.739429473876953E-4 MB
+Compression ratio:0.5290055248618785
