@@ -136,3 +136,25 @@ Rilke/Rilke10.txt:
 Size of original file: 362.0 bytes = 0.353515625 kbytes = 3.452301025390625E-4 MB
 Size of new file: 193.375 bytes = 0.1888427734375 kbytes = 1.844167709350586E-4 MB
 Compression ratio:0.5341850828729282
+
+//ChatGBT Rilke
+
+ChatGBT/RiGedicht_ChatGBT.txt:
+Size of original file: 603.0 bytes = 0.5888671875 kbytes = 5.750656127929688E-4 MB
+Size of new file: 317.25 bytes = 0.309814453125 kbytes = 3.025531768798828E-4 MB
+Compression ratio:0.5261194029850746
+
+ChatGBT/RiGedicht2_ChatGBT.txt:
+Size of original file: 585.0 bytes = 0.5712890625 kbytes = 5.578994750976562E-4 MB
+Size of new file: 316.75 bytes = 0.309326171875 kbytes = 3.020763397216797E-4 MB
+Compression ratio:0.5414529914529914
+
+ChatGBT/RiGedicht3_ChatGBT.txt:
+Size of original file: 592.0 bytes = 0.578125 kbytes = 5.645751953125E-4 MB
+Size of new file: 316.625 bytes = 0.3092041015625 kbytes = 3.019571304321289E-4 MB
+Compression ratio:0.534839527027027
+
+ChatGBT/RiGedicht4_ChatGBT.txt:
+Size of original file: 545.0 bytes = 0.5322265625 kbytes = 5.197525024414062E-4 MB
+Size of new file: 285.25 bytes = 0.278564453125 kbytes = 2.720355987548828E-4 MB
+Compression ratio:0.523394495412844
