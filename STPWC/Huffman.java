@@ -235,7 +235,7 @@ public class Huffman extends Huffnodes{
     public static void convertAndWrite() throws FileNotFoundException{
          
         //Create Summary File
-        String summary = "ChatGBTvsAuthors.txt";
+        String summary = "STPWC/ChatGBTvsAuthors.txt";
         File summaryF = new File(summary);
         try{
             if(summaryF.createNewFile()){
