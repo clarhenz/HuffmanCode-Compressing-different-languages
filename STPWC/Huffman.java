@@ -235,7 +235,7 @@ public class Huffman extends Huffnodes{
     public static void convertAndWrite() throws FileNotFoundException{
          
         //Create Summary File
-        String summary = "ChatGBTvsAuthors.txt";
+        String summary = "STPWC/ChatGBTvsAuthors.txt";
         File summaryF = new File(summary);
         try{
             if(summaryF.createNewFile()){
@@ -249,18 +249,29 @@ public class Huffman extends Huffnodes{
         }
 
         Scanner console = new Scanner(System.in);
-        System.out.print("File Name: ");
+        System.out.print("File Name/ Author: ");
         String filename = console.nextLine();
+        System.out.print("ChatGBT (y/n): ");
+        String ChatGBTyn = console.nextLine();
         console.close();
+        System.out.println(ChatGBTyn);
 
         if (filename.contains(".txt")) {
             processFile(summaryF, filename);
         } else {
 
-            String part = filename;
+            String author = filename;
+            String[] nameAuth = author.split(" ");
+            String dirAuth = nameAuth[1];
+            String filesAuthor = nameAuth[0] + nameAuth[1];
             for (int i = 1; i<11; i++){
-                filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt";
+                if(ChatGBTyn == "y"){
+                    filename = "STPWC/ChatGBT" + "/" + filename + i + "_ChatGBT.txt";
+                } else {
+                    filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+                }
                 processFile(summaryF, filename);
+                
             }   
         }
     }
