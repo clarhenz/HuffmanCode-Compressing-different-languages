@@ -193,3 +193,48 @@ ChatGBT/RiGedicht10_ChatGBT.txt:
 Size of original file: 543.0 bytes = 0.5302734375 kbytes = 5.178451538085938E-4 MB
 Size of new file: 287.25 bytes = 0.280517578125 kbytes = 2.739429473876953E-4 MB
 Compression ratio:0.5290055248618785
+
+STPWC/Rimbaud/ArthurRimbaud2.txt:
+Size of original file: 376.0 bytes = 0.3671875 kbytes = 3.5858154296875E-4 MB
+Size of new file: 194.75 bytes = 0.190185546875 kbytes = 1.857280731201172E-4 MB
+Compression ratio:0.5179521276595744
+
+STPWC/Rimbaud/ArthurRimbaud3.txt:
+Size of original file: 1835.0 bytes = 1.7919921875 kbytes = 0.0017499923706054688 MB
+Size of new file: 971.0 bytes = 0.9482421875 kbytes = 9.260177612304688E-4 MB
+Compression ratio:0.5291553133514987
+
+STPWC/Rimbaud/ArthurRimbaud4.txt:
+Size of original file: 664.0 bytes = 0.6484375 kbytes = 6.3323974609375E-4 MB
+Size of new file: 356.75 bytes = 0.348388671875 kbytes = 3.402233123779297E-4 MB
+Compression ratio:0.5372740963855421
+
+STPWC/Rimbaud/ArthurRimbaud5.txt:
+Size of original file: 655.0 bytes = 0.6396484375 kbytes = 6.246566772460938E-4 MB
+Size of new file: 346.125 bytes = 0.3380126953125 kbytes = 3.300905227661133E-4 MB
+Compression ratio:0.5284351145038167
+
+STPWC/Rimbaud/ArthurRimbaud6.txt:
+Size of original file: 600.0 bytes = 0.5859375 kbytes = 5.7220458984375E-4 MB
+Size of new file: 319.5 bytes = 0.31201171875 kbytes = 3.046989440917969E-4 MB
+Compression ratio:0.5325
+
+STPWC/Rimbaud/ArthurRimbaud7.txt:
+Size of original file: 694.0 bytes = 0.677734375 kbytes = 6.618499755859375E-4 MB
+Size of new file: 372.0 bytes = 0.36328125 kbytes = 3.54766845703125E-4 MB
+Compression ratio:0.5360230547550432
+
+STPWC/Rimbaud/ArthurRimbaud8.txt:
+Size of original file: 1074.0 bytes = 1.048828125 kbytes = 0.0010242462158203125 MB
+Size of new file: 577.5 bytes = 0.56396484375 kbytes = 5.507469177246094E-4 MB
+Compression ratio:0.5377094972067039
+
+STPWC/Rimbaud/ArthurRimbaud9.txt:
+Size of original file: 638.0 bytes = 0.623046875 kbytes = 6.084442138671875E-4 MB
+Size of new file: 341.0 bytes = 0.3330078125 kbytes = 3.2520294189453125E-4 MB
+Compression ratio:0.5344827586206896
+
+STPWC/Rimbaud/ArthurRimbaud10.txt:
+Size of original file: 2207.0 bytes = 2.1552734375 kbytes = 0.0021047592163085938 MB
+Size of new file: 1164.875 bytes = 1.1375732421875 kbytes = 0.0011109113693237305 MB
+Compression ratio:0.5278092433167195
