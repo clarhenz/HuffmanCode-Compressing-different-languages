@@ -196,7 +196,7 @@ public class Huffman extends Huffnodes{
             if(compressed.createNewFile()){
                 System.out.println("File created: " + compressed.getName());
             }else{
-                ;
+            
                 // System.out.println("File " + compressed.getName() + " already exists");
             }      
         }catch (IOException e){
@@ -286,13 +286,28 @@ public class Huffman extends Huffnodes{
 
     }
 
-    public static void writeAllRatios(String summary, String filename) throws FileNotFoundException{
-        String part = filename;
+    public static void writeAllRatios(String summary, String filename,int ChatGBTyn) throws FileNotFoundException{
+        String author = filename;
         try{
             
             for (int i = 1; i<11; i++){
                 FileWriter myWriter = new FileWriter(summary,true);
-                filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt"; 
+                if(ChatGBTyn == 1){
+                    filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
+                } else {
+                    String[] nameAuth = author.split(" ");
+                    if(nameAuth.length > 1){
+                        String dirAuth = nameAuth[1];
+                        String filesAuthor = nameAuth[0] + nameAuth[1];
+                        filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+                    } else if (author == "Shakespeare"){
+                        String filesAuthor = "Sonnet";
+                        filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
+                    } else {
+                        filename = "STPWC/" + author + "/" + author + i + ".txt";
+                    }
+                    
+                } 
                 myWriter.write(i + ": " + fileRatio(filename));
                 myWriter.write("\n");
                 myWriter.close();
@@ -305,12 +320,19 @@ public class Huffman extends Huffnodes{
         }
     }
 
-    public static double lsum(String summary, String filename) throws FileNotFoundException {       
-        String part = filename;
+    public static double lsum(String summary, String filename, int ChatGBTyn) throws FileNotFoundException {       
+        String author = filename;
         double mySum = 0;
-        
         for (int i = 1; i<11; i++){
-            filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt";
+            if(ChatGBTyn == 1){
+                filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
+            } else {
+                String[] nameAuth = author.split(" ");
+                String dirAuth = nameAuth[1];
+                String filesAuthor = nameAuth[0] + nameAuth[1];
+                filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+            }
+            
             mySum = mySum + fileRatio(filename);
             
         }
@@ -318,20 +340,27 @@ public class Huffman extends Huffnodes{
         return mySum;
     }
 
-    public static double lmean(String summary,String filename) throws FileNotFoundException {       
-        double mySum = lsum(summary, filename);
+    public static double lmean(String summary,String filename, int ChatGBTyn) throws FileNotFoundException {       
+        double mySum = lsum(summary, filename, ChatGBTyn);
         double mean = mySum/10.0;
         return mean;
     }
 
-    public static double ldeviantion(String summary, String filename) throws FileNotFoundException{ 
-        String part = filename;
-        double mean = lmean(summary, filename);
+    public static double ldeviantion(String summary, String filename,int ChatGBTyn) throws FileNotFoundException{ 
+        String author = filename;
+        double mean = lmean(summary, filename, ChatGBTyn);
         System.out.println("mean: " + mean);
         double deviation = 0.0;
 
         for (int i = 1; i<11; i++){
-            filename = "ASCII TEXTS\\EU Parlament\\T" + i +"_" + part + ".txt";
+            if(ChatGBTyn == 1){
+                filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
+            } else {
+                String[] nameAuth = author.split(" ");
+                String dirAuth = nameAuth[1];
+                String filesAuthor = nameAuth[0] + nameAuth[1];
+                filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+            }
             deviation = deviation + ((fileRatio(filename) - mean)*(fileRatio(filename) - mean));
         }
         System.out.println(deviation);
@@ -356,9 +385,12 @@ public class Huffman extends Huffnodes{
     public static void fStats(String summary) throws FileNotFoundException{
         
         Scanner console = new Scanner(System.in);
-        System.out.print("Language: ");
+        System.out.print("File Name/ Author: ");
         String filename = console.nextLine();
+        System.out.print("ChatGBT (yes: 1 /no: 2): ");
+        int ChatGBTyn = Integer.valueOf(console.nextLine());
         console.close();
+        System.out.println(ChatGBTyn == 1);
         try{
             FileWriter myWriter = new FileWriter(summary,true);
             myWriter.write("\n");
@@ -370,8 +402,8 @@ public class Huffman extends Huffnodes{
             System.out.println("An error occured");
             e.printStackTrace();
         }
-        writeAllRatios(summary, filename);
-        System.out.println("deviation: " + ldeviantion(summary, filename));
+        writeAllRatios(summary, filename, ChatGBTyn);
+        System.out.println("deviation: " + ldeviantion(summary, filename,ChatGBTyn));
         
     }
     public static void demo() throws FileNotFoundException{
@@ -395,8 +427,8 @@ public class Huffman extends Huffnodes{
     }
 
     public static void main(String[] args) throws FileNotFoundException{
-        convertAndWrite();
-        //fStats("deviationASCII.txt");
+        //convertAndWrite();
+        fStats("deviationChatGBT.txt");
         //demo();
     }
 }
