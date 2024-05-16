@@ -259,7 +259,7 @@ public class Huffman extends Huffnodes{
             processFile(summaryF, filename);
         } else {
             String author = filename;
-            for (int i = 1; i<4; i++){
+            for (int i = 1; i<11; i++){
                 if(ChatGBTyn == 1){
                     filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
                 } else {

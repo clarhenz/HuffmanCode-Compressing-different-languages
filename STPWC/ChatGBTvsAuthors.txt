@@ -119,6 +119,11 @@ Size of original file: 1111.0 bytes = 1.0849609375 kbytes = 0.001059532165527343
 Size of new file: 577.875 bytes = 0.5643310546875 kbytes = 5.511045455932617E-4 MB
 Compression ratio:0.5201395139513951
 
+STPWC/Rilke/Rilke6.txt:
+Size of original file: 504.0 bytes = 0.4921875 kbytes = 4.8065185546875E-4 MB
+Size of new file: 257.25 bytes = 0.251220703125 kbytes = 2.453327178955078E-4 MB
+Compression ratio:0.5104166666666666
+
 Rilke/Rilke7.txt:
 Size of original file: 506.0 bytes = 0.494140625 kbytes = 4.825592041015625E-4 MB
 Size of new file: 263.875 bytes = 0.2576904296875 kbytes = 2.516508102416992E-4 MB
@@ -294,4 +299,5 @@ STPWC/ChatGBT/RimPoem10_ChatGBT.txt:
 Size of original file: 1097.0 bytes = 1.0712890625 kbytes = 0.0010461807250976562 MB
 Size of new file: 566.875 bytes = 0.5535888671875 kbytes = 5.40614128112793E-4 MB
 Compression ratio:0.5167502278942571
+
 
