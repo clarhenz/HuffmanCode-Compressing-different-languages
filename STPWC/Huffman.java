@@ -251,23 +251,22 @@ public class Huffman extends Huffnodes{
         Scanner console = new Scanner(System.in);
         System.out.print("File Name/ Author: ");
         String filename = console.nextLine();
-        System.out.print("ChatGBT (y/n): ");
-        String ChatGBTyn = console.nextLine();
+        System.out.print("ChatGBT (yes: 1 /no: 2): ");
+        int ChatGBTyn = Integer.valueOf(console.nextLine());
         console.close();
-        System.out.println(ChatGBTyn);
+        System.out.println(ChatGBTyn == 1);
 
         if (filename.contains(".txt")) {
             processFile(summaryF, filename);
         } else {
-
             String author = filename;
-            String[] nameAuth = author.split(" ");
-            String dirAuth = nameAuth[1];
-            String filesAuthor = nameAuth[0] + nameAuth[1];
             for (int i = 1; i<11; i++){
-                if(ChatGBTyn == "y"){
-                    filename = "STPWC/ChatGBT" + "/" + filename + i + "_ChatGBT.txt";
+                if(ChatGBTyn == 1){
+                    filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
                 } else {
+                    String[] nameAuth = author.split(" ");
+                    String dirAuth = nameAuth[1];
+                    String filesAuthor = nameAuth[0] + nameAuth[1];
                     filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
                 }
                 processFile(summaryF, filename);
