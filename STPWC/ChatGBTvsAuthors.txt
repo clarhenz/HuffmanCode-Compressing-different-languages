@@ -42,19 +42,19 @@ Size of original file: 655.0 bytes = 0.6396484375 kbytes = 6.246566772460938E-4 
 Size of new file: 348.375 bytes = 0.3402099609375 kbytes = 3.3223628997802734E-4 MB
 Compression ratio:0.5318702290076336
 
-Shakespeare\\Sonnet37.txt:
+Shakespeare\\Sonnet9.txt:
 Size of original file: 601.0 bytes = 0.5869140625 kbytes = 5.731582641601562E-4 MB
 Size of new file: 320.5 bytes = 0.31298828125 kbytes = 3.056526184082031E-4 MB
 Compression ratio:0.5332778702163061
 
-Shakespeare\\Sonnet81.txt:
+Shakespeare\\Sonnet10.txt:
 Size of original file: 642.0 bytes = 0.626953125 kbytes = 6.122589111328125E-4 MB
 Size of new file: 335.25 bytes = 0.327392578125 kbytes = 3.197193145751953E-4 MB
 Compression ratio:0.522196261682243
 
 //CHAT_GBT
 
-ChatGBT/ShakespeareSonet_ChatGBT.txt:
+ChatGBT/ShSonet1_ChatGBT.txt:
 Size of original file: 625.0 bytes = 0.6103515625 kbytes = 5.960464477539062E-4 MB
 Size of new file: 333.625 bytes = 0.3258056640625 kbytes = 3.1816959381103516E-4 MB
 Compression ratio:0.5338
@@ -141,7 +141,7 @@ Compression ratio:0.5341850828729282
 
 //ChatGBT Rilke
 
-ChatGBT/RiGedicht_ChatGBT.txt:
+ChatGBT/RiGedicht1_ChatGBT.txt:
 Size of original file: 603.0 bytes = 0.5888671875 kbytes = 5.750656127929688E-4 MB
 Size of new file: 317.25 bytes = 0.309814453125 kbytes = 3.025531768798828E-4 MB
 Compression ratio:0.5261194029850746
@@ -186,11 +186,6 @@ Size of original file: 584.0 bytes = 0.5703125 kbytes = 5.5694580078125E-4 MB
 Size of new file: 317.875 bytes = 0.3104248046875 kbytes = 3.031492233276367E-4 MB
 Compression ratio:0.544306506849315
 
-ChatGBT/RiGedicht9_ChatGBT.txt:
-Size of original file: 584.0 bytes = 0.5703125 kbytes = 5.5694580078125E-4 MB
-Size of new file: 317.875 bytes = 0.3104248046875 kbytes = 3.031492233276367E-4 MB
-Compression ratio:0.544306506849315
-
 ChatGBT/RiGedicht10_ChatGBT.txt:
 Size of original file: 543.0 bytes = 0.5302734375 kbytes = 5.178451538085938E-4 MB
 Size of new file: 287.25 bytes = 0.280517578125 kbytes = 2.739429473876953E-4 MB
@@ -198,7 +193,7 @@ Compression ratio:0.5290055248618785
 
 //// Rimbaud \\\\
 
-STPWC/Rimbaud/ArthurRimbaud.txt:
+STPWC/Rimbaud/ArthurRimbaud1.txt:
 Size of original file: 1721.0 bytes = 1.6806640625 kbytes = 0.0016412734985351562 MB
 Size of new file: 918.25 bytes = 0.896728515625 kbytes = 8.757114410400391E-4 MB
 Compression ratio:0.5335560720511331
@@ -247,6 +242,8 @@ STPWC/Rimbaud/ArthurRimbaud10.txt:
 Size of original file: 2207.0 bytes = 2.1552734375 kbytes = 0.0021047592163085938 MB
 Size of new file: 1164.875 bytes = 1.1375732421875 kbytes = 0.0011109113693237305 MB
 Compression ratio:0.5278092433167195
+
+//ChatGBT Rimbaud
 
 STPWC/ChatGBT/RimPoem1_ChatGBT.txt:
 Size of original file: 739.0 bytes = 0.7216796875 kbytes = 7.047653198242188E-4 MB
