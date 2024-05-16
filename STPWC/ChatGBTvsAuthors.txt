@@ -294,3 +294,4 @@ STPWC/ChatGBT/RimPoem10_ChatGBT.txt:
 Size of original file: 1097.0 bytes = 1.0712890625 kbytes = 0.0010461807250976562 MB
 Size of new file: 566.875 bytes = 0.5535888671875 kbytes = 5.40614128112793E-4 MB
 Compression ratio:0.5167502278942571
+

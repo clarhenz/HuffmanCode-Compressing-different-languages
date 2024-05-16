@@ -259,15 +259,24 @@ public class Huffman extends Huffnodes{
             processFile(summaryF, filename);
         } else {
             String author = filename;
-            for (int i = 1; i<11; i++){
+            for (int i = 1; i<4; i++){
                 if(ChatGBTyn == 1){
                     filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
                 } else {
                     String[] nameAuth = author.split(" ");
-                    String dirAuth = nameAuth[1];
-                    String filesAuthor = nameAuth[0] + nameAuth[1];
-                    filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-                }
+                    if(nameAuth.length > 1){
+                        String dirAuth = nameAuth[1];
+                        String filesAuthor = nameAuth[0] + nameAuth[1];
+                        filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+                    } else if (author == "Shakespeare"){
+                        String filesAuthor = "Sonnet";
+                        filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
+                    } else {
+                        filename = "STPWC/" + author + "/" + author + i + ".txt";
+                    }
+                    
+                } 
+               
                 processFile(summaryF, filename);
                 
             }   
@@ -426,8 +435,8 @@ public class Huffman extends Huffnodes{
     }
 
     public static void main(String[] args) throws FileNotFoundException{
-        //convertAndWrite();
-        fStats("deviationChatGBT.txt");
+        convertAndWrite();
+        //fStats("deviationChatGBT.txt");
         //demo();
     }
 }
