@@ -458,7 +458,7 @@ public class Huffman extends Huffnodes{
 
     public static void main(String[] args) throws FileNotFoundException{
         //convertAndWrite();
-        fStats("deviationChatGBT.txt");
+        fStats("STPWC/deviationChatGBT.txt");
         //demo();
     }
 }
