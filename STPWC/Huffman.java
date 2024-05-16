@@ -419,7 +419,13 @@ public class Huffman extends Huffnodes{
             FileWriter myWriter = new FileWriter(summary,true);
             myWriter.write("\n");
             myWriter.write("\n");
-            myWriter.write("Author: " + filename);
+            if(ChatGBTyn == 2){
+                myWriter.write("Author: " + filename + "\n");
+                myWriter.write("Real: \n");
+            } else {
+                myWriter.write("ChatGBT: \n");
+            }
+            
             myWriter.write("\n");
             myWriter.close();
         }catch (IOException e){
