@@ -336,10 +336,18 @@ public class Huffman extends Huffnodes{
                 filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
             } else {
                 String[] nameAuth = author.split(" ");
-                String dirAuth = nameAuth[1];
-                String filesAuthor = nameAuth[0] + nameAuth[1];
-                filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-            }
+                if(nameAuth.length > 1){
+                    String dirAuth = nameAuth[1];
+                    String filesAuthor = nameAuth[0] + nameAuth[1];
+                    filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+                } else if (author == "Shakespeare"){
+                    String filesAuthor = "Sonnet";
+                    filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
+                } else {
+                    filename = "STPWC/" + author + "/" + author + i + ".txt";
+                }
+                
+            } 
             
             mySum = mySum + fileRatio(filename);
             
@@ -365,10 +373,18 @@ public class Huffman extends Huffnodes{
                 filename = "STPWC/ChatGBT" + "/" + author + i + "_ChatGBT.txt";
             } else {
                 String[] nameAuth = author.split(" ");
-                String dirAuth = nameAuth[1];
-                String filesAuthor = nameAuth[0] + nameAuth[1];
-                filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-            }
+                if(nameAuth.length > 1){
+                    String dirAuth = nameAuth[1];
+                    String filesAuthor = nameAuth[0] + nameAuth[1];
+                    filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
+                } else if (author == "Shakespeare"){
+                    String filesAuthor = "Sonnet";
+                    filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
+                } else {
+                    filename = "STPWC/" + author + "/" + author + i + ".txt";
+                }
+                
+            } 
             deviation = deviation + ((fileRatio(filename) - mean)*(fileRatio(filename) - mean));
         }
         System.out.println(deviation);
@@ -403,7 +419,7 @@ public class Huffman extends Huffnodes{
             FileWriter myWriter = new FileWriter(summary,true);
             myWriter.write("\n");
             myWriter.write("\n");
-            myWriter.write("Language: " + filename);
+            myWriter.write("Author: " + filename);
             myWriter.write("\n");
             myWriter.close();
         }catch (IOException e){
@@ -435,8 +451,8 @@ public class Huffman extends Huffnodes{
     }
 
     public static void main(String[] args) throws FileNotFoundException{
-        convertAndWrite();
-        //fStats("deviationChatGBT.txt");
+        //convertAndWrite();
+        fStats("deviationChatGBT.txt");
         //demo();
     }
 }
