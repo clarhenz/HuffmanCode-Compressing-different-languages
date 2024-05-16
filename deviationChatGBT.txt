@@ -29,3 +29,8 @@ ChatGBT
 
 mean: 0.5348875167327037
 deviation: 0.009333160301736901
+
+
+Author: Shakespeare
+Real: 
+

@@ -268,7 +268,7 @@ public class Huffman extends Huffnodes{
                         String dirAuth = nameAuth[1];
                         String filesAuthor = nameAuth[0] + nameAuth[1];
                         filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-                    } else if (author == "Shakespeare"){
+                    } else if (author.equals("Shakespeare")){
                         String filesAuthor = "Sonnet";
                         filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
                     } else {
@@ -308,7 +308,7 @@ public class Huffman extends Huffnodes{
                         String dirAuth = nameAuth[1];
                         String filesAuthor = nameAuth[0] + nameAuth[1];
                         filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-                    } else if (author == "Shakespeare"){
+                    } else if (author.equals("Shakespeare")){
                         String filesAuthor = "Sonnet";
                         filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
                     } else {
@@ -340,7 +340,7 @@ public class Huffman extends Huffnodes{
                     String dirAuth = nameAuth[1];
                     String filesAuthor = nameAuth[0] + nameAuth[1];
                     filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-                } else if (author == "Shakespeare"){
+                } else if (author.equals("Shakespeare")){
                     String filesAuthor = "Sonnet";
                     filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
                 } else {
@@ -377,9 +377,9 @@ public class Huffman extends Huffnodes{
                     String dirAuth = nameAuth[1];
                     String filesAuthor = nameAuth[0] + nameAuth[1];
                     filename = "STPWC/" + dirAuth + "/" + filesAuthor + i + ".txt";
-                } else if (author == "Shakespeare"){
-                    String filesAuthor = "Sonnet";
-                    filename = "STPWC/" + author + "/" + filesAuthor + i + ".txt";
+                } else if (author.equals("Shakespeare")){
+                    String fileAuthor = "Sonnet";
+                    filename = "STPWC/" + author + "/" + fileAuthor + i + ".txt";
                 } else {
                     filename = "STPWC/" + author + "/" + author + i + ".txt";
                 }
