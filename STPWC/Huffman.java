@@ -254,8 +254,7 @@ public class Huffman extends Huffnodes{
         System.out.print("ChatGBT (yes: 1 /no: 2): ");
         int ChatGBTyn = Integer.valueOf(console.nextLine());
         console.close();
-        System.out.println(ChatGBTyn == 1);
-
+        System.out.println(filename.contains(".txt"));
         if (filename.contains(".txt")) {
             processFile(summaryF, filename);
         } else {
